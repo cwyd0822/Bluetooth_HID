@@ -65,7 +65,7 @@ class BluetoothBluezProfile(dbus.service.Object):
 class BluetoothDevice():
     # change these constants
     MY_ADDRESS = "B8:27:EB:B6:8C:21"
-    MY_DEV_NAME = "Bluetooth_Keyboard/Mouse"
+    MY_DEV_NAME = "Bluetooth_KM_ASCS"
 
     # define some constants
     P_CTRL = 17  # Service port - must match port configured in SDP record
