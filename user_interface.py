@@ -64,7 +64,8 @@ class BluetoothBluezProfile(dbus.service.Object):
 #
 class BluetoothDevice():
     # change these constants
-    MY_ADDRESS = "B8:27:EB:B6:8C:21"
+    # MY_ADDRESS = "B8:27:EB:B6:8C:21"
+    MY_ADDRESS = "DC:A6:32:45:F9:07"
     MY_DEV_NAME = "Bluetooth_KM_ASCS"
 
     # define some constants
