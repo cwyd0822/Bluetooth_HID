@@ -156,6 +156,11 @@ class BluetoothDevice():
                                     profiles=[bluetooth.SERIAL_PORT_PROFILE],
                                     # protocols=[bluetooth.OBEX_UUID]
                                     )
+        bluetooth.advertise_service(self.sinterrupt, "SampleClient", service_id=self.UUID,
+                                    service_classes=[self.UUID, bluetooth.SERIAL_PORT_CLASS],
+                                    profiles=[bluetooth.SERIAL_PORT_PROFILE],
+                                    # protocols=[bluetooth.OBEX_UUID]
+                                    )
 
         self.ccontrol, cinfo = self.scontrol.accept()
         print("Got a connection on the control channel from " + cinfo[0])
