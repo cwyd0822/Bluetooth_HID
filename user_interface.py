@@ -73,7 +73,7 @@ class BluetoothDevice():
     P_INTR = 19  # Service port - must match port configured in SDP record #Interrrupt port
     PROFILE_DBUS_PATH = "/bluez/upwork/hidbluetooth_profile"  # dbus path of  the bluez profile we will create
     SDP_RECORD_PATH = sys.path[0] + "/sdp_record.xml"  # file path of the sdp record to load
-    UUID = "00001124-0000-1000-8000-00805f9b34fc"
+    UUID = "00001124-0000-1000-8000-00805f9b34fb"
 
     def __init__(self):
 
@@ -141,11 +141,11 @@ class BluetoothDevice():
         self.sinterrupt = BluetoothSocket(RFCOMM)
 
         # bind these sockets to a port - port zero to select next available
-        # self.scontrol.bind((self.MY_ADDRESS, self.P_CTRL))
-        # self.sinterrupt.bind((self.MY_ADDRESS, self.P_INTR))
+        self.scontrol.bind((self.MY_ADDRESS, self.P_CTRL))
+        self.sinterrupt.bind((self.MY_ADDRESS, self.P_INTR))
         
-        self.scontrol.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
-        self.sinterrupt.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
+        # self.scontrol.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
+        # self.sinterrupt.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
 
         # Start listening on the server sockets
         self.scontrol.listen(1)  # Limit of 1 connection
