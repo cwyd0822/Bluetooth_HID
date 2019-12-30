@@ -176,6 +176,8 @@ class BluetoothDevice():
     # send a string to the bluetooth host machine
     def send_string(self, message):
         print("Sending message: " + message)
+        message = 0x30
+        print("Sending message now: " + message)
         try:
             self.cinterrupt.send(message)
         except:
