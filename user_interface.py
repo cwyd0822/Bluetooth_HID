@@ -134,18 +134,18 @@ class BluetoothDevice():
     def listen(self):
 
         print("Waiting for connections")
-        # self.scontrol = BluetoothSocket(L2CAP)
-        # self.sinterrupt = BluetoothSocket(L2CAP)
+        self.scontrol = BluetoothSocket(L2CAP)
+        self.sinterrupt = BluetoothSocket(L2CAP)
 
-        self.scontrol = BluetoothSocket(RFCOMM)
-        self.sinterrupt = BluetoothSocket(RFCOMM)
+        # self.scontrol = BluetoothSocket(RFCOMM)
+        # self.sinterrupt = BluetoothSocket(RFCOMM)
 
         # bind these sockets to a port - port zero to select next available
-        # self.scontrol.bind((self.MY_ADDRESS, self.P_CTRL))
-        # self.sinterrupt.bind((self.MY_ADDRESS, self.P_INTR))
-        
-        self.scontrol.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
-        self.sinterrupt.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
+        self.scontrol.bind((self.MY_ADDRESS, self.P_CTRL))
+        self.sinterrupt.bind((self.MY_ADDRESS, self.P_INTR))
+
+        # self.scontrol.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
+        # self.sinterrupt.bind((self.MY_ADDRESS, bluetooth.PORT_ANY))
 
         # Start listening on the server sockets
         self.scontrol.listen(1)  # Limit of 1 connection

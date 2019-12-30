@@ -17,8 +17,8 @@
 	<attribute id="0x0004"> <!-- Protocol Descriptor List -->
 		<sequence>
 			<sequence>
-				<!-- <uuid value="0x0100" /> --> <!-- L2CAP -->
-				<uuid value="0x0003" /> <!-- RFCOMM -->
+				<uuid value="0x0100" /> <!-- L2CAP -->
+				<!-- <uuid value="0x0003" /> --> <!-- RFCOMM -->
 				<uint16 value="0x0011" /> <!-- HIDP -->
 			</sequence>
 			<sequence>
@@ -42,8 +42,8 @@
 		<sequence>
 			<sequence>
 				<uuid value="0x1124" /> <!-- Human Interface Device -->
-				<!-- <uint16 value="0x0100" /> --> <!-- L2CAP -->
-				<uint16 value="0x0003" /> <!-- RFCOMM -->
+				<uint16 value="0x0100" /> <!-- L2CAP -->
+				<!-- <uint16 value="0x0003" /> --> <!-- RFCOMM -->
 			</sequence>
 		</sequence>
 	</attribute>
@@ -51,8 +51,8 @@
 		<sequence>
 			<sequence>
 				<sequence>
-					<!-- <uuid value="0x0100" /> --> <!-- L2CAP -->
-					<uuid value="0x0003" /><!-- RFCOMM -->
+					<uuid value="0x0100" /> <!-- L2CAP -->
+					<!-- <uuid value="0x0003" /> --><!-- RFCOMM -->
 					<uint16 value="0x0013" />
 				</sequence>
 				<sequence>
