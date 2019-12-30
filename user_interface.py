@@ -150,13 +150,13 @@ class BluetoothDevice():
         # Start listening on the server sockets
         self.scontrol.listen(1)  # Limit of 1 connection
         self.sinterrupt.listen(1)
-
+        """
         bluetooth.advertise_service(self.scontrol, "SampleServer",
                                     service_classes=[bluetooth.SERIAL_PORT_CLASS],
                                     profiles=[bluetooth.SERIAL_PORT_PROFILE],
                                     # protocols=[bluetooth.OBEX_UUID]
                                     )
-        """
+        
         bluetooth.advertise_service(self.sinterrupt, "SampleClient",
                                     service_classes=[bluetooth.SERIAL_PORT_CLASS],
                                     profiles=[bluetooth.SERIAL_PORT_PROFILE],
