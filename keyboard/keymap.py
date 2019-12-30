@@ -13,7 +13,7 @@
 keytable = {
     "KEY_RESERVED" : 0,
     "KEY_ESC" : 41,
-    "KEY_1" : 0x30,
+    "KEY_1" : 30,
     "KEY_2" : 31,
     "KEY_3" : 32,
     "KEY_4" : 33,
