@@ -134,11 +134,11 @@ class BluetoothDevice():
     def listen(self):
 
         print("Waiting for connections")
-        self.scontrol = BluetoothSocket(L2CAP)
-        self.sinterrupt = BluetoothSocket(L2CAP)
+        # self.scontrol = BluetoothSocket(L2CAP)
+        # self.sinterrupt = BluetoothSocket(L2CAP)
 
-        # self.scontrol = BluetoothSocket(RFCOMM)
-        # self.sinterrupt = BluetoothSocket(RFCOMM)
+        self.scontrol = BluetoothSocket(RFCOMM)
+        self.sinterrupt = BluetoothSocket(RFCOMM)
 
         # bind these sockets to a port - port zero to select next available
         self.scontrol.bind((self.MY_ADDRESS, self.P_CTRL))
