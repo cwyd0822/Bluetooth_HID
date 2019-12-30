@@ -71,7 +71,7 @@ class BluetoothDevice():
     P_INTR = 19  # Service port - must match port configured in SDP record #Interrrupt port
     PROFILE_DBUS_PATH = "/bluez/upwork/hidbluetooth_profile"  # dbus path of  the bluez profile we will create
     SDP_RECORD_PATH = sys.path[0] + "/sdp_record.xml"  # file path of the sdp record to load
-    UUID = "00001124-0000-1000-8000-00805f9b34fb"
+    UUID = "00001124-0000-1000-8000-00805f9b34fc"
 
     def __init__(self, queue):
 
